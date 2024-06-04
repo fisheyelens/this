@@ -34,6 +34,7 @@ let itsMe = {
 console.dir("객체에서 보는 this : ", itsMe );
 // * 결과 : '객체에서 보는 this : '
 
+
 //  4  //
 console.log("메서드로 보는 this : ", itsMe.sentence());
 
