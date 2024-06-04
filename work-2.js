@@ -62,7 +62,42 @@
 // console.log(test._a + test._b);
 
 
-// * 강사코드 
+// // * 강사코드 
+
+// class WorkTwo {
+//   constructor(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   }
+
+//   set a(value) {
+//     if(typeof(value) === "number") {
+//       return this._a = value;
+//     } else {
+//       throw new Error("a는 숫자만 입력 가능합니다.");
+//     }
+//   }
+
+//   set b(value) {
+//     if(typeof(value) === "number") {
+//       return this._b = value;
+//     } else {
+//       throw new Error("b는 숫자만 입력 가능합니다.");
+//     }
+//   }
+// }
+
+// add(){
+//   return this._a + this._b;
+// }
+
+
+// let test = new WorkTwo(1, 2);
+// console.log(test);
+// console.dir(test);
+// // * add 쓰면 이제 console.log(test.add()); 로만 써도 ㅇㅋ
+
+// * 강사 전체 코드
 
 class WorkTwo {
   constructor(a, b) {
@@ -85,9 +120,20 @@ class WorkTwo {
       throw new Error("b는 숫자만 입력 가능합니다.");
     }
   }
+
+  add() {
+    return this._a + this._b;
+  }
+
 }
 
 let test = new WorkTwo(1, 2);
 console.log(test);
 console.dir(test);
-console.log(test._a + test._b);
+console.log(test.add());
+
+// 덧셈 하나 하자고, "규격"을 만드는 이상한 짓 중
+// 1. 타입을 여지 없이 만듦
+// 2. 함수가 아닌 -> 매서드로 만듦
+// ** 원하는 것이 아니면 절대로 가동되지 않음
+// -> 인증 받은 형태. 까다로운 절차를 거친.
