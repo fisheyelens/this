@@ -1,5 +1,9 @@
 
 function workOne(a,b){
-  let local = a+b;
-  return local;
+  if (typeof(a) === 'number'){
+    if(typeof(b) === 'number'){
+      let local = a+b;
+      return local;
+    }
+  }
 }
