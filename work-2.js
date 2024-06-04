@@ -128,12 +128,20 @@ class WorkTwo {
 }
 
 let test = new WorkTwo(1, 2);
-console.log(test);
+// console.log(test);
 console.dir(test);
-console.log(test.add());
+// console.log(test.add());
+
+
+
+// 결과 : WorkTwo { _a: 1, _b: 2 } 'WorkTwo'가 제대로 맞는디 또 확인하는 것 
+console.log(test instanceof WorkTwo);
+
 
 // 덧셈 하나 하자고, "규격"을 만드는 이상한 짓 중
 // 1. 타입을 여지 없이 만듦
 // 2. 함수가 아닌 -> 매서드로 만듦
 // ** 원하는 것이 아니면 절대로 가동되지 않음
 // -> 인증 받은 형태. 까다로운 절차를 거친.
+
+// * set 만 보면 깔끔함
